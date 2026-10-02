@@ -49,12 +49,12 @@ jobs:
 
       - name: Build APK
         run: |
-          cd project
+          cd project/NightcoreFloating
           gradle assembleDebug --no-daemon
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: NightcoreFloating-APK
-          path: project/app/build/outputs/apk/debug/app-debug.apk
+          path: project/NightcoreFloating/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
